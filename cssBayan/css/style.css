@@ -80,7 +80,7 @@
 
    .image {
     max-width: 220px;
-    min-height: 200px;
+    min-height: 205px;
     width: 100%;
   }
 
@@ -98,7 +98,7 @@
 
  
   .block-input:checked + .block-input-area .block-image {
-    height: 12em;
+    height: 13em;
   } 
 
   .block-input:checked + .block-input-area .block-header {
@@ -115,7 +115,7 @@
 
 
   .block-item:hover .block-image   {
-    height: 12em;
+    height: 13em;
   }
 
   .block-item:hover .fa-plus {
@@ -135,5 +135,26 @@
   }
 
 
+  @media screen and (max-width: 820px) {
+    body {
+      background-color: rgb(175, 223, 207);
+      font-size: 0.7rem;
+    }
+    .block-input:checked + .block-input-area .block-image {
+      height: 19em;
+    } 
   
+  }
+
+  @media screen and (max-width: 320px) {
+    
+    body {
+      background-color: rgb(214, 173, 180);
+      font-size: 0.5rem;
+    }
+
+    .block-input:checked + .block-input-area .block-image {
+      height: 26em;
+    } 
+  }
  
