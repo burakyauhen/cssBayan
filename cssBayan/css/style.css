@@ -1,52 +1,139 @@
+@font-face {
+  font-family: "Inter";
+  src: url(../assets/fonts/Inter-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(../assets/fonts/Inter-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(../assets/fonts/Inter-Light.ttf);
+  font-weight: 300;
+}
+
+
 * {
     box-sizing: border-box;
   }
   
   body {
     background-color: beige;
+    font-family: "Inter";
+    font-size: 1rem;
   }
 
   /* container */
 
   .container {
-    display: flex;
     max-width: 1500px;
     width: 80%;
     margin: 0 auto;
-    border: 1px solid;
   }
 
-
-  .block-item {
+   .block-list {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    cursor: pointer;
+
   }
 
-  .block-firstline {
+  .block-item {
+    width: 100%;
+    cursor: pointer;
+    border-bottom: 2px solid rgb(153, 143, 143);
+  }
+
+  
+
+  .block-input-area {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .block-text {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
+  .block-header {
+    color: rgb(30, 99, 226);
+  }
+
+ 
+
   .block-input {
     appearance: none;
+    transition: 1s;
   }
 
   .block-image {
-    display: none;
+    height: 0;
+    overflow: hidden;
     align-self: center;
-    border: 1px solid rgb(131, 127, 127);
+    transition: 1s;
   }
 
-   .image-one {
+   .image {
     max-width: 220px;
+    min-height: 200px;
     width: 100%;
   }
 
-  .block-input:checked + .block-image {
+  .block-close {
+    display: none;
+  }
+
+  .fa-xmark {
+    display: none;
+  }
+
+  .fa-plus {
     display: block;
+  }
+
+ 
+  .block-input:checked + .block-input-area .block-image {
+    height: 12em;
   } 
 
+  .block-input:checked + .block-input-area .block-header {
+    color: rgb(43, 41, 41);
+  }
+
+  .block-input:checked + .block-input-area .fa-plus {
+    display: none;
+  }
+
+  .block-input:checked + .block-input-area .fa-xmark {
+    display: block;
+  }
+
+
+  .block-item:hover .block-image   {
+    height: 12em;
+  }
+
+  .block-item:hover .fa-plus {
+    display: none;
+  }
+
+  .block-item:hover .fa-xmark {
+    display: block;
+  }
+
+  .block-list:hover .block-header {
+    color: rgb(43, 41, 41);
+  }
+
+  .block-list:hover .block-close {
+    display: block;
+  }
+
+
+  
  
