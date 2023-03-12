@@ -1,0 +1,156 @@
+@font-face {
+  font-family: "Inter";
+  src: url(../assets/fonts/Inter-Bold.ttf);
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: beige;
+  font-family: "Inter";
+  font-size: 1rem;
+}
+
+/* container */
+
+.container {
+  max-width: 90rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.block-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.block-item {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border-bottom: 0.2rem solid rgb(153, 143, 143);
+}
+
+.block-input-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.block-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 99%;
+}
+
+.block-header {
+  color: rgb(30, 99, 226);
+}
+
+.block-input {
+  appearance: none;
+  transition: 1s;
+}
+
+.block-image {
+  height: 0;
+  overflow: hidden;
+  align-self: center;
+  transition: 1s;
+}
+
+.image {
+  max-width: 15rem;
+  max-height: 15rem;
+  width: 100%;
+}
+
+.block-close {
+  transition: 1s;
+  opacity: 0;
+}
+
+.fa-xmark {
+  position: absolute;
+  transition: 1s;
+  opacity: 0;
+}
+
+.fa-plus {
+  position: absolute;
+  transition: 1s;
+}
+
+.block-input:checked + .block-input-area .block-image {
+  height: 13em;
+}
+
+.block-input:checked + .block-input-area .block-header {
+  color: rgb(43, 41, 41);
+}
+
+.block-input:checked + .block-input-area .fa-xmark {
+  opacity: 1;
+}
+
+.block-input:checked + .block-input-area .fa-plus {
+  opacity: 0;
+}
+
+.block-item:hover .block-image {
+  height: 13em;
+}
+
+.block-item:hover .fa-xmark {
+  opacity: 1;
+}
+
+.block-item:hover .fa-plus {
+  opacity: 0;
+}
+
+.block-list:hover .block-header {
+  color: rgb(43, 41, 41);
+}
+
+.block-list:hover .block-close {
+  opacity: 1;
+}
+
+@media screen and (max-width: 820px) {
+  body {
+    font-size: 0.7rem;
+  }
+
+  .block-item:hover .block-image {
+    height: 19em;
+  }
+
+  .block-input:checked + .block-input-area .block-image {
+    height: 19em;
+  }
+
+  
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    font-size: 0.5rem;
+  }
+
+  .block-item:hover .block-image {
+    height: 17em;
+  }
+
+  .block-input:checked + .block-input-area .block-image {
+    height: 17em;
+  }
+
+  .image {
+    max-width: 9rem;
+    max-height: 9rem;
+  }
+}
