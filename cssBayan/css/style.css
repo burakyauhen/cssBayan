@@ -124,9 +124,15 @@ body {
     font-size: 0.7rem;
   }
 
+  .block-item:hover .block-image {
+    height: 19em;
+  }
+
   .block-input:checked + .block-input-area .block-image {
     height: 19em;
   }
+
+  
 }
 
 @media screen and (max-width: 320px) {
@@ -134,7 +140,16 @@ body {
     font-size: 0.5rem;
   }
 
+  .block-item:hover .block-image {
+    height: 17em;
+  }
+
   .block-input:checked + .block-input-area .block-image {
-    height: 26em;
+    height: 17em;
+  }
+
+  .image {
+    max-width: 9rem;
+    max-height: 9rem;
   }
 }
