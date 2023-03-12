@@ -1,19 +1,7 @@
 @font-face {
   font-family: "Inter";
   src: url(../assets/fonts/Inter-Bold.ttf);
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url(../assets/fonts/Inter-Regular.ttf);
   font-weight: 400;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url(../assets/fonts/Inter-Light.ttf);
-  font-weight: 300;
 }
 
 * {
@@ -29,7 +17,7 @@ body {
 /* container */
 
 .container {
-  max-width: 1500px;
+  max-width: 90rem;
   width: 80%;
   margin: 0 auto;
 }
@@ -42,7 +30,7 @@ body {
 .block-item {
   width: 100%;
   cursor: pointer;
-  border-bottom: 2px solid rgb(153, 143, 143);
+  border-bottom: 0.2rem solid rgb(153, 143, 143);
 }
 
 .block-input-area {
@@ -74,8 +62,8 @@ body {
 }
 
 .image {
-  max-width: 220px;
-  min-height: 205px;
+  max-width: 15rem;
+  max-height: 15rem;
   width: 100%;
 }
 
@@ -135,6 +123,7 @@ body {
   body {
     font-size: 0.7rem;
   }
+
   .block-input:checked + .block-input-area .block-image {
     height: 19em;
   }
